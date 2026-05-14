@@ -1,0 +1,14 @@
+{
+  "name": "mmorpg",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.11.0",
+  "scripts": {
+    "dev:client": "pnpm --filter @mmorpg/client dev",
+    "dev:server": "pnpm --filter @mmorpg/server dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck"
+  }
+}

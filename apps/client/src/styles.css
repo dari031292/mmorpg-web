@@ -1,0 +1,64 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+  background: #111827;
+  color: #f9fafb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.game-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  min-height: 100vh;
+}
+
+.game-shell__viewport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(180deg, #111827 0%, #0f172a 100%);
+}
+
+.game-shell__sidebar {
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px;
+  background: #111827;
+}
+
+.panel {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(17, 24, 39, 0.9);
+  padding: 16px;
+}
+
+.panel h1,
+.panel h2 {
+  margin-top: 0;
+}
+
+.panel code {
+  font-family: 'Cascadia Code', Consolas, monospace;
+}
+
+.game-canvas {
+  width: 100%;
+  max-width: 960px;
+  min-height: 540px;
+}
