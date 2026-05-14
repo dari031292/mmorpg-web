@@ -94,6 +94,10 @@ Hoy existe:
 5. enviar input de movimiento
 6. validar movimiento en servidor
 
+Este slice ya quedó formalizado en:
+
+- `docs/slices/001-foundation-movement.md`
+
 ## Criterio de calidad para avanzar
 
 No agregar sistemas nuevos si todavía no están claros:

@@ -34,6 +34,21 @@ Objetivo: probar el núcleo del juego con la menor complejidad posible.
 - movimiento validado por servidor
 - colisiones básicas
 
+### Slice definido para arrancar
+
+- `docs/slices/001-foundation-movement.md`
+
+### Intención del Slice 001
+
+Validar el primer loop end-to-end real del proyecto:
+
+- conexión WebSocket visible
+- mapa base representado en cliente
+- spawn local del jugador
+- input de movimiento
+- validación autoritativa del servidor
+- replicación/corrección mínima del estado del jugador
+
 ## Fase 2 — Mundo Persistente Base
 
 Objetivo: consolidar el loop central del juego.

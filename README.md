@@ -23,6 +23,7 @@ El engine no se construirá al inicio como producto separado. Se extraerá despu
 - `docs/architecture.md` — arquitectura de alto nivel
 - `docs/networking.md` — modelo de red inicial
 - `docs/roadmap.md` — roadmap por fases
+- `docs/slices/001-foundation-movement.md` — definición del vertical slice 001
 - `docs/glossary.md` — vocabulario compartido
 - `docs/adr/` — decisiones arquitectónicas registradas
 
@@ -134,13 +135,14 @@ pnpm build
 
 ## Próximo objetivo
 
-Construir el primer vertical slice técnico:
+Construir el vertical slice 001:
 
-1. render de tilemap base
-2. conexión cliente-servidor
-3. spawn del jugador
-4. movimiento validado por servidor
-5. replicación básica de estado
+1. conexión cliente-servidor visible
+2. mapa base renderizado como área inicial
+3. spawn del jugador local
+4. intención de movimiento desde cliente
+5. validación de movimiento en servidor
+6. corrección/replicación básica de estado
 
 ## Principios
 
