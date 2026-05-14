@@ -14,6 +14,17 @@ export function GameViewport() {
 
     const app = new Application();
     let destroyed = false;
+    let initialized = false;
+    let appDestroyed = false;
+
+    const destroyApp = () => {
+      if (!initialized || appDestroyed) {
+        return;
+      }
+
+      appDestroyed = true;
+      app.destroy({ removeView: true }, { children: true });
+    };
 
     void (async () => {
       await app.init({
@@ -23,8 +34,10 @@ export function GameViewport() {
         antialias: false,
       });
 
+      initialized = true;
+
       if (destroyed) {
-        app.destroy(true);
+        destroyApp();
         return;
       }
 
@@ -50,7 +63,7 @@ export function GameViewport() {
 
     return () => {
       destroyed = true;
-      app.destroy(true, { children: true });
+      destroyApp();
     };
   }, []);
 
