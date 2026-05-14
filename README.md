@@ -58,6 +58,80 @@ docs/
 - **Shared:** tipos, constantes y protocolo compartido
 - **Persistencia:** PostgreSQL + Drizzle ORM
 
+## Cómo correr el proyecto
+
+### 1. Abrir terminal en el repo
+
+```powershell
+cd D:\local\mmorpg
+```
+
+### 2. Activar `fnm` en la sesión
+
+```powershell
+fnm env --shell power-shell | Out-String | Invoke-Expression
+fnm use default
+```
+
+### 3. Instalar dependencias
+
+```powershell
+pnpm install
+```
+
+### 4. Levantar el servidor
+
+En una terminal:
+
+```powershell
+pnpm dev:server
+```
+
+Servidor disponible en:
+
+- `http://localhost:3000`
+
+### 5. Levantar el cliente
+
+En otra terminal:
+
+```powershell
+pnpm dev:client
+```
+
+Cliente disponible en:
+
+- `http://localhost:5173`
+
+### Estado actual de la ejecución
+
+Hoy el proyecto permite:
+
+- levantar cliente y servidor por separado
+- renderizar una grilla base en el cliente
+- iniciar un servidor HTTP + WebSocket
+
+Todavía NO incluye:
+
+- conexión visual cliente-servidor en UI
+- spawn del jugador
+- movimiento sincronizado
+- mapa jugable real
+
+## Comandos útiles
+
+### Typecheck
+
+```powershell
+pnpm typecheck
+```
+
+### Build
+
+```powershell
+pnpm build
+```
+
 ## Próximo objetivo
 
 Construir el primer vertical slice técnico:
